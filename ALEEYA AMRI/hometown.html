@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>hometown.html</title>
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #D2B48C; 
+      color: #6E260E;
+      margin: 40px;
+      text-align: center;
+      position: relative;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: url('bg.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      filter: blur(8px);
+      z-index: -1;
+    }
+    @keyframes headingPulse {
+      0%, 100% {
+        color: #6E260E;
+        transform: scale(1);
+        text-shadow: 0 0 5px #8B4513;
+      }
+      50% {
+        color: white;
+        transform: scale(1.1);
+        text-shadow: 0 0 20px #5A2E0C;
+      }
+    }
+    h2 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7);
+      animation: headingPulse 3s ease-in-out infinite;
+      position: relative;
+      z-index: 1;
+    }
+    main {
+      max-width: 700px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(110, 38, 14, 0.3);
+      font-size: 1.2em;
+      line-height: 1.6;
+      position: relative;
+      z-index: 1;
+    }
+    figure {
+      margin-top: 20px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(110, 38, 14, 0.4);
+      overflow: hidden;
+      display: inline-block;
+      cursor: pointer;
+      animation: photoPulse 4s ease-in-out infinite;
+      transition: filter 0.3s ease;
+    }
+    figure:hover {
+      filter: brightness(1.15);
+      animation-play-state: paused;
+    }
+    figure img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+    }
+    @keyframes photoPulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 6px 15px rgba(110, 38, 14, 0.4);
+        filter: brightness(1);
+      }
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 12px 30px rgba(110, 38, 14, 0.6);
+        filter: brightness(1.1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2>My Hometown</h2>
+  <main>
+    <p>
+      Welcome to my hometown Segamat! Segamat is a charming town located in the northern part of Johor, Malaysia. Known for its peaceful atmosphere and friendly community, Segamat is a place where tradition and modernity blend harmoniously. I love my hometown!
+    </p>
+    <figure>
+      <img src="segamat.jpg" alt="My Hometown" />
+    </figure>
+  </main>
+</body>
+</html>
+
+
+
+
+
+
