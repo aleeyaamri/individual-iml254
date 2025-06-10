@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>education.html</title>
+  <style>
+    body {
+      font-family: Courier, monospace;
+      background-color: #D2B48C;
+      color: #6E260E;
+      margin: 40px;
+      text-align: center;
+      position: relative;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: url('bg.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      filter: blur(8px);
+      z-index: -1;
+    }
+    @keyframes headingPulse {
+      0%, 100% {
+        color: #6E260E;
+        transform: scale(1);
+        text-shadow: 0 0 5px #8B4513;
+      }
+      50% {
+        color: white;
+        transform: scale(1.1);
+        text-shadow: 0 0 20px #5A2E0C;
+      }
+    }
+    h2 {
+      font-size: 3em;
+      margin-bottom: 40px;
+      animation: headingPulse 3s ease-in-out infinite;
+      color: #6E260E;
+      text-shadow: 0 0 5px #8B4513;
+      position: relative;
+      z-index: 1;
+    }
+    main {
+      position: relative;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 20px 15px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(110, 38, 14, 0.3);
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    article {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 25px 30px;
+      box-shadow: 0 6px 15px rgba(110, 38, 14, 0.2);
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+    section {
+      flex: 1 1 300px;
+    }
+    section h3 {
+      margin-top: 0;
+      font-size: 1.6em;
+      margin-bottom: 8px;
+      color: #6E260E;
+    }
+    section small {
+      display: block;
+      font-size: 0.95em;
+      color: #a67c52;
+      margin-bottom: 12px;
+      font-style: italic;
+    }
+    section p {
+      font-size: 1.1em;
+      line-height: 1.5;
+      margin: 0;
+    }
+    figure {
+      flex: 0 0 250px;
+      max-width: 250px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(110, 38, 14, 0.3);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      margin: 0;
+    }
+    figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+    figure:hover {
+      transform: scale(1.05) rotate(1deg);
+      box-shadow: 0 12px 30px rgba(110, 38, 14, 0.5);
+    }
+    @media (max-width: 800px) {
+      main {
+        padding: 15px 10px;
+      }
+      article {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      section {
+        flex: none;
+      }
+      figure {
+        flex: none;
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>My Education</h2>
+
+  <main>
+
+    <article>
+      <section>
+        <h3>SK Bandar Putra</h3>
+        <small>2012 - 2017</small>
+        <p>Primary school where I built my foundation in education and made lifelong friends.</p>
+      </section>
+      <figure>
+        <img src="sk.jpg" alt="SK Bandar Putra School" />
+      </figure>
+    </article>
+
+    <article>
+      <section>
+        <h3>SMK Dato Bentara Dalam</h3>
+        <small>2018 - 2023</small>
+        <p>SMK Dato Bentara Dalam is the place where I took my Sijil Pelajaran Malaysia (SPM) and graduated from school.</p>
+      </section>
+      <figure>
+        <img src="smk.jpg" alt="SMK Dato Bentara Dalam School" />
+      </figure>
+    </article>
+
+    <article>
+      <section>
+        <h3>Universiti Teknologi MARA</h3>
+        <small>2024 - Present</small>
+        <p>I am currently pursuing my Diploma in Information Management at Universiti Teknologi MARA (UiTM). Click on the picture to find out more about where I studied.</p>
+      </section>
+      <figure>
+        <a href="https://kedah.uitm.edu.my/" target="_blank" rel="noopener noreferrer">
+          <img src="uni.jpg" alt="Universiti Teknologi MARA" />
+        </a>
+      </figure>
+    </article>
+
+  </main>
+
+</body>
+</html>
+
