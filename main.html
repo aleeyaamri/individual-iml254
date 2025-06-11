@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 20px;
+            font-family: Courier, monospace;
+            font-size: 150%;
+            font-weight: bold;
+            color: #6E260E;
+            text-align: center;
+            position: relative;
+            overflow-x: hidden;
+            background-color: #fff; 
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('eight.jpg'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            filter: blur(8px);
+            transform: scale(1.05); 
+            z-index: -1;
+        }
+        @keyframes headingPulse {
+            0%, 100% {
+                color: #6E260E;
+                transform: scale(1);
+                text-shadow: 1px 1px 2px rgba(255,255,255,0.7);
+            }
+            50% {
+                color: #a85f2a;
+                transform: scale(1.1);
+                text-shadow: 2px 2px 8px rgba(255,255,255,0.9);
+            }
+        }
+
+        h2 {
+            font-size: 200%;
+            font-weight: bold;
+            color: #6E260E;
+            padding: 10px 0;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.7);
+            position: relative;
+            z-index: 1;
+            animation: headingPulse 3s ease-in-out infinite;
+        }
+
+        p {
+            background-color: #f5deb3; 
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        main {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px; 
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.75);
+            padding: 20px 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(110, 38, 14, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 50px;
+            margin: 0;
+            width: 50%;
+            color: #f28482;
+            font-weight: bold;
+            font-size: 1.2em;
+            background-color: #f5deb3;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(110, 38, 14, 0.3);
+        }
+
+        ul li {
+            margin-bottom: 20px;
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 4px solid #6E260E;
+            box-shadow: 0 4px 15px rgba(110, 38, 14, 0.5);
+            animation: pulse 4s ease-in-out infinite;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 4px 15px rgba(110, 38, 14, 0.5); }
+            50% { box-shadow: 0 6px 25px rgba(110, 38, 14, 0.8); }
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome to My Personal Website (E-Resume)</h2>
+    <p>
+        Get to know more about me:
+    </p>
+
+    <main>
+        <ul>
+            <li>My Biodata</li>
+            <li>My Interest</li>
+            <li>My Gallery</li>
+            <li>My Hometown</li>
+            <li>My Education</li>
+            <li>My Certificate</li>
+            <li>My skills</li>
+            <li>Others</li>
+        </ul>
+        <img src="image.jpg" alt="Profile Image">
+    </main>
+</body>
+</html>
+
